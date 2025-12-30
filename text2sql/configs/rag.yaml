@@ -1,0 +1,25 @@
+# RAG Configuration
+retriever:
+  model_name: "sentence-transformers/all-MiniLM-L6-v2"
+  top_k: 5
+  top_k_large: 10
+  similarity_threshold: 0.3
+  
+# Card generation
+cards:
+  include_sample_rows: false
+  max_sample_rows: 3
+  max_columns_per_table: 20
+  anonymize_data: true
+
+# Vector store
+vector_store:
+  index_type: "faiss"  # or "chroma"
+  embedding_dim: 384
+  persist_path: "cards/vector_store"
+
+# Context assembly
+context:
+  max_context_length: 1500  # tokens
+  table_card_template: "Table {table_name}: {description}\nColumns: {columns}"
+  column_card_template: "  - {column_name} ({type}): {description}"

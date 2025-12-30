@@ -1,0 +1,53 @@
+# Configuration for Ollama-based Text2SQL
+# Using local Ollama qwen3:1.7b model
+model_name: "qwen3:1.7b"
+model_type: "ollama"  # Use Ollama instead of transformers
+
+# Ollama Configuration
+ollama:
+  base_url: "http://localhost:11434"
+  temperature: 0.1
+  top_p: 0.9
+  max_tokens: 300
+  stop_sequences: ["[QUESTION]", "[INSTRUCTION]", "[SCHEMA]"]
+
+# For fine-tuning (if needed later with Ollama's training features)
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+
+# Training Configuration (for traditional fine-tuning if switching to transformers later)
+train:
+  learning_rate: 2e-4
+  epochs: 3
+  per_device_batch_size: 2
+  gradient_accumulation_steps: 32  # effective batch = 2 * 32 = 64
+  max_seq_length: 2048
+  warmup_steps: 100
+  save_steps: 500
+  eval_steps: 250
+  logging_steps: 50
+
+# Inference Configuration (for Ollama)
+inference:
+  batch_size: 1  # Ollama processes one at a time
+  timeout: 30    # seconds per request
+  retry_attempts: 3
+
+# Data Configuration
+data:
+  train_path: "data/bird_jsonl/train.jsonl"
+  dev_path: "data/bird_jsonl/dev.jsonl"
+  max_train_samples: null  # use all data
+  max_eval_samples: 500   # limit eval for speed
+
+# Response masking (only supervise SQL output)
+mask_response_only: true
+response_template: "[OUTPUT SQL]"
+
+# Output Configuration
+output:
+  output_dir: "outputs/checkpoints"
+  run_name: "qwen_lora_bird"
+  report_to: null  # disable wandb for now

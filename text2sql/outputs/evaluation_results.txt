@@ -1,0 +1,2974 @@
+======================================================================================================================================================
+DETAILED EVALUATION RESULTS
+======================================================================================================================================================
+
+[1] Simple SELECT (Easy)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  List the name of clubs in ascending alphabetical order.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT Name FROM club ORDER BY Name ASC
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[2] Simple SELECT (Easy)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  List the addresses of buildings in descending order of building completion year.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT Address FROM building ORDER BY Completed_Year DESC
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[3] Simple SELECT (Easy)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What are the titles of books with the highest purchase price across all books ?
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  select title from book order by purchaseprice  desc limit 1
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[4] Simple SELECT (Easy)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What are the model, class, and construction of the cheapest headphone?
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT model ,  CLASS ,  construction FROM headphone ORDER BY price LIMIT 1
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[5] Simple SELECT (Easy)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  List the names of all distinct paintings in alphabetical order.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT DISTINCT title FROM paintings ORDER BY title
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[6] Simple SELECT (Easy)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Return the stadiums of institutions, ordered by capacity descending.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT Stadium FROM institution ORDER BY Capacity DESC
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[7] Simple SELECT (Easy)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  list all the names of press in descending order of the profit of the year.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT name FROM press ORDER BY Year_Profits_billion DESC
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[8] Simple SELECT (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What is the horsepower of the car with the greatest accelerate?
+
+SCHEMA:
+  continents(ContId number, Continent text; PRIMARY KEY(ContId))
+countries(CountryId number, CountryName text, Continent number; PRIMARY KEY(CountryId); FK(Continent REFERENCES continents(ContId)))
+car_...
+
+GROUND TRUTH:
+  SELECT T1.horsepower FROM CARS_DATA AS T1 ORDER BY T1.accelerate DESC LIMIT 1;
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[9] Simple SELECT (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What is the first, middle, and last name of the earliest school graduate?
+
+SCHEMA:
+  Addresses(address_id number, line_1 text, line_2 text, line_3 text, city text, zip_postcode text, state_province_county text, country text, other_address_details text; PRIMARY KEY(address_id))
+Courses...
+
+GROUND TRUTH:
+  SELECT first_name ,  middle_name ,  last_name FROM Students ORDER BY date_left ASC LIMIT 1
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[10] Simple SELECT (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What is the name of the conductor who has worked the greatest number of years?
+
+SCHEMA:
+  conductor(Conductor_ID number, Name text, Age number, Nationality text, Year_of_Work number; PRIMARY KEY(Conductor_ID))
+orchestra(Orchestra_ID number, Orchestra text, Conductor_ID number, Record_Compa...
+
+GROUND TRUTH:
+  SELECT Name FROM conductor ORDER BY Year_of_Work DESC LIMIT 1
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[11] Single-table WHERE (Easy)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  List the name of clubs whose manufacturer is not "Nike"
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT Name FROM club WHERE Manufacturer != "Nike"
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[12] Single-table WHERE (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Find the details of the customer who has never used any services .
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  select customer_details from customers where customer_id not in (select customer_id from customers_and_services)
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[13] Single-table WHERE (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Which headphone models do not have any stock in any store?
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT model FROM headphone WHERE headphone_id NOT IN (SELECT headphone_id FROM stock)
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[14] Single-table WHERE (Easy)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Find the locations that have paintings before 1885 and no work with medium on canvas?
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT DISTINCT LOCATION FROM paintings WHERE YEAR  <  1885 AND mediumOn != "canvas"
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[15] Single-table WHERE (Easy)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Select contents of all boxes with a value larger than $150.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT CONTENTS FROM boxes WHERE Value  >  150
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[16] Single-table WHERE (Easy)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Which abbreviation corresponds to Jetblue Airways?
+
+SCHEMA:
+  airlines(uid number, Airline text, Abbreviation text, Country text; PRIMARY KEY(uid))
+airports(City text, AirportCode text, AirportName text, Country text, CountryAbbrev text; PRIMARY KEY(AirportCode)...
+
+GROUND TRUTH:
+  SELECT Abbreviation FROM AIRLINES WHERE Airline  =  "JetBlue Airways"
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[17] Single-table WHERE (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What is the description of the department whose name has the substring the computer?
+
+SCHEMA:
+  Addresses(address_id number, line_1 text, line_2 text, line_3 text, city text, zip_postcode text, state_province_county text, country text, other_address_details text; PRIMARY KEY(address_id))
+Courses...
+
+GROUND TRUTH:
+  SELECT department_description FROM Departments WHERE department_name LIKE '%computer%'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[18] Single-table WHERE (Easy)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Show the names of all high schoolers in grade 10.
+
+SCHEMA:
+  Highschooler(ID number, name text, grade number; PRIMARY KEY(ID))
+Friend(student_id number, friend_id number; PRIMARY KEY(student_id); FK(student_id REFERENCES Highschooler(ID)); FK(friend_id REFERENC...
+
+GROUND TRUTH:
+  SELECT name FROM Highschooler WHERE grade  =  10
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[19] Single-table WHERE (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What are the cards belong to duel deck a? List the ID.
+
+SCHEMA:
+  cards(id integer, artist text, asciiName text, availability text, borderColor text, cardKingdomFoilId text, cardKingdomId text, colorIdentity text, colorIndicator text, colors text, convertedManaCost ...
+
+GROUND TRUTH:
+  SELECT id FROM cards WHERE duelDeck = 'a'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[20] Single-table WHERE (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What is the power ID of cryokinesis?
+
+SCHEMA:
+  alignment(id integer, alignment text; PRIMARY KEY(id))
+attribute(id integer, attribute_name text; PRIMARY KEY(id))
+colour(id integer, colour text; PRIMARY KEY(id))
+gender(id integer, gender text; PRIM...
+
+GROUND TRUTH:
+  SELECT id FROM superpower WHERE power_name = 'Cryokinesis'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[21] 2-table JOIN + aggregation (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Show names of clubs in descending order of average earnings of players belonging.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT T1.Name FROM club AS T1 JOIN player AS T2 ON T1.Club_ID  =  T2.Club_ID GROUP BY T1.Club_ID ORDER BY avg(T2.Earnings) DESC
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[22] 2-table JOIN + aggregation (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What is the name of the client with the most number of orders?
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT T2.name FROM Orders AS T1 JOIN Client AS T2 ON T1.idClient  =  T2.idClient GROUP BY T1.idClient ORDER BY count(*) DESC LIMIT 1
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[23] 2-table JOIN + aggregation (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Find the total number of papers for each affiliation.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT count(DISTINCT T2.paper_id) ,  T1.name FROM Affiliation AS T1 JOIN Author_list AS T2 ON T1.affiliation_id  =  T2.affiliation_id GROUP BY T1.affiliation_id
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[24] 2-table JOIN + aggregation (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  For each warehouse location, what is the value of the most expensive box?
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT max(T1.value) ,  T2.location FROM boxes AS T1 JOIN warehouses AS T2 ON T1.warehouse  =  T2.code GROUP BY T2.location
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[25] 2-table JOIN + aggregation (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What are the names of all European countries with at least 3 manufacturers?
+
+SCHEMA:
+  continents(ContId number, Continent text; PRIMARY KEY(ContId))
+countries(CountryId number, CountryName text, Continent number; PRIMARY KEY(CountryId); FK(Continent REFERENCES continents(ContId)))
+car_...
+
+GROUND TRUTH:
+  SELECT T1.CountryName FROM COUNTRIES AS T1 JOIN CONTINENTS AS T2 ON T1.Continent  =  T2.ContId JOIN CAR_MAKERS AS T3 ON T1.CountryId  =  T3.Country WHERE T2.Continent  =  'europe' GROUP BY T1.CountryName HAVING count(*)  >=  3;
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[26] 2-table JOIN + aggregation (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What are the contestant numbers and names of the contestants who had at least two votes?
+
+SCHEMA:
+  AREA_CODE_STATE(area_code number, state text; PRIMARY KEY(area_code))
+CONTESTANTS(contestant_number number, contestant_name text; PRIMARY KEY(contestant_number))
+VOTES(vote_id number, phone_number num...
+
+GROUND TRUTH:
+  SELECT T1.contestant_number , T1.contestant_name FROM contestants AS T1 JOIN votes AS T2 ON T1.contestant_number  =  T2.contestant_number GROUP BY T1.contestant_number HAVING count(*)  >=  2
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[27] 2-table JOIN + aggregation (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Calculate the percentage of account from 'Decin' district for all accounts are opened in 1993.
+
+SCHEMA:
+  account(account_id integer, district_id integer, frequency text, date date; PRIMARY KEY(account_id); FK(district_id REFERENCES district(district_id)))
+card(card_id integer, disp_id integer, type text,...
+
+GROUND TRUTH:
+  SELECT CAST(SUM(T1.A2 = 'Decin') AS REAL) * 100 / COUNT(account_id) FROM district AS T1 INNER JOIN account AS T2 ON T1.district_id = T2.district_id WHERE STRFTIME('%Y', T2.date) = '1993'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[28] 2-table JOIN + aggregation (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What is the annual average number of sets that were released between 1/1/2012 to 12/31/2015? Indicate the common langugage of the card.
+
+SCHEMA:
+  cards(id integer, artist text, asciiName text, availability text, borderColor text, cardKingdomFoilId text, cardKingdomId text, colorIdentity text, colorIndicator text, colors text, convertedManaCost ...
+
+GROUND TRUTH:
+  SELECT (CAST(SUM(T1.id) AS REAL) / COUNT(T1.id)) / 4, T2.language FROM sets AS T1 INNER JOIN set_translations AS T2 ON T1.id = T2.id WHERE T1.releaseDate BETWEEN '2012-01-01' AND '2015-12-31' GROUP BY T1.releaseDate ORDER BY COUNT(T2.language) DESC LIMIT 1
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[29] 2-table JOIN + aggregation (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  List circuits which host 4 f1 races from year 1990 to 2000.
+
+SCHEMA:
+  circuits(circuitId integer, circuitRef text, name text, location text, country text, lat real, lng real, alt integer, url text; PRIMARY KEY(circuitId))
+constructors(constructorId integer, constructorR...
+
+GROUND TRUTH:
+  SELECT DISTINCT T1.name FROM circuits AS T1 INNER JOIN races AS T2 ON T2.circuitID = T1.circuitId WHERE STRFTIME('%Y', T2.date) BETWEEN '1990' AND '2000' GROUP BY T1.name HAVING COUNT(T2.raceId) = 4
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[30] 2-table JOIN + aggregation (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  For the examinations done after 1997/1/1, how many of them have the result of an inactivated partial prothrom bin time?
+
+SCHEMA:
+  Examination(ID integer, Examination Date date, aCL IgG real, aCL IgM real, ANA integer, ANA Pattern text, aCL IgA integer, Diagnosis text, KCT text, RVVT text, LAC text, Symptoms text, Thrombosis inte...
+
+GROUND TRUTH:
+  SELECT COUNT(T1.ID) FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE T2.Date > '1997-01-01' AND T2.APTT >= 45
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[31] 3+ table JOINs (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  List the id, first name and last name of the customers who both have placed more than 2 orders and have bought at least 3 items.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT T1.customer_id ,  T1.customer_first_name ,  T1.customer_last_name FROM Customers AS T1 JOIN Orders AS T2 ON T1.customer_id  =  T2.customer_id GROUP BY T1.customer_id HAVING count(*)  >  2 INTERSECT SELECT T1.customer_id ,  T1.customer_first_name ,  T1.customer_last_name FROM Customers AS T1 JOIN Orders AS T2 ON T1.customer_id  =  T2.customer_id JOIN Order_items AS T3 ON T2.order_id  =  T3.order_id GROUP BY T1.customer_id HAVING count(*)  >= 3
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[32] 3+ table JOINs (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What are the vehicle ids and models which have been driven by more than 2 drivers or been driven by the driver named 'Jeff Gordon'?
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT T1.vehicle_id ,  T1.model FROM vehicle AS T1 JOIN vehicle_driver AS T2 ON T1.vehicle_id  =  T2.vehicle_id JOIN driver AS T3 ON T2.driver_id  =  T3.driver_id WHERE T3.name  =  'Jeff Gordon' UNION SELECT T1.vehicle_id ,  T1.model FROM vehicle AS T1 JOIN vehicle_driver AS T2 ON T1.vehicle_id  =  T2.vehicle_id GROUP BY T2.vehicle_id HAVING count(*)  >  2
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[33] 3+ table JOINs (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What are the names of clients who have ordered Pride and Prejudice?
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT T3.name FROM Orders AS T1 JOIN Books_Order AS T2 ON T1.idOrder  =  T2.idOrder JOIN Client AS T3 ON T1.idClient  =  T3.idClient JOIN Book AS T4 ON T4.isbn  =  T2.isbn WHERE T4.title  =  "Pride and Prejudice"
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[34] 3+ table JOINs (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Find all papers with titles and paper IDs collaborated by Stanford University and Columbia University.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT T1.title ,  T1.paper_id FROM Paper AS T1 JOIN Author_list AS T2 ON T1.paper_id  =  T2.paper_id JOIN Affiliation AS T3 ON T2.affiliation_id  =  T3.affiliation_id WHERE T3.name LIKE "Stanford University" INTERSECT SELECT T1.title ,  T1.paper_id FROM Paper AS T1 JOIN Author_list AS T2 ON T1.paper_id  =  T2.paper_id JOIN Affiliation AS T3 ON T2.affiliation_id  =  T3.affiliation_id WHERE T3.name LIKE "Columbia University"
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[35] 3+ table JOINs (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Show the names of languages that are the official language for both countries with overall score greater than 95 and countries with overall score less than than 90.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT T3.name FROM countries AS T1 JOIN official_languages AS T2 ON T1.id  =  T2.country_id JOIN languages AS T3 ON T2.language_id  =  T3.id WHERE T1.overall_score  >  95 INTERSECT SELECT T3.name FROM countries AS T1 JOIN official_languages AS T2 ON T1.id  =  T2.country_id JOIN languages AS T3 ON T2.language_id  =  T3.id WHERE T1.overall_score  <  90
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[36] 3+ table JOINs (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  List package number of package shipped in planet Omicron Persei 8 and sent by Zapp Brannigan.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT T1.PackageNumber FROM PACKAGE AS T1 JOIN Client AS T2 ON  T1.Sender = T2.AccountNumber JOIN Shipment AS T3 ON T1.Shipment = T3.ShipmentID JOIN Planet AS T4 ON T3.Planet = T4.PlanetID WHERE T2.Name = "Zapp Brannigan" AND T4.Name = "Omicron Persei 8";
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[37] 3+ table JOINs (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What is the first name of every student who has a dog but does not have a cat?
+
+SCHEMA:
+  Student(StuID number, LName text, Fname text, Age number, Sex text, Major number, Advisor number, city_code text; PRIMARY KEY(StuID))
+Has_Pet(StuID number, PetID number; FK(StuID REFERENCES Student(St...
+
+GROUND TRUTH:
+  SELECT T1.fname ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'dog' AND T1.stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat')
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[38] 3+ table JOINs (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What is the name of the visitor who visited both a museum opened before 2009 and a museum opened after 2011?
+
+SCHEMA:
+  museum(Museum_ID number, Name text, Num_of_Staff number, Open_Year text; PRIMARY KEY(Museum_ID))
+visitor(ID number, Name text, Level_of_membership number, Age number; PRIMARY KEY(ID))
+visit(Museum_ID ...
+
+GROUND TRUTH:
+  SELECT t1.name FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id JOIN museum AS t3 ON t3.Museum_ID  =  t2.Museum_ID WHERE t3.open_year  <  2009 INTERSECT SELECT t1.name FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id JOIN museum AS t3 ON t3.Museum_ID  =  t2.Museum_ID WHERE t3.open_year  >  2011
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[39] 3+ table JOINs (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What was the growth rate of the total amount of loans across all accounts for a male client between 1996 and 1997?
+
+SCHEMA:
+  account(account_id integer, district_id integer, frequency text, date date; PRIMARY KEY(account_id); FK(district_id REFERENCES district(district_id)))
+card(card_id integer, disp_id integer, type text,...
+
+GROUND TRUTH:
+  SELECT CAST((SUM(CASE WHEN STRFTIME('%Y', T1.date) = '1997' THEN T1.amount ELSE 0 END) - SUM(CASE WHEN STRFTIME('%Y', T1.date) = '1996' THEN T1.amount ELSE 0 END)) AS REAL) * 100 / SUM(CASE WHEN STRFTIME('%Y', T1.date) = '1996' THEN T1.amount ELSE 0 END) FROM loan AS T1 INNER JOIN account AS T2 ON T1.account_id = T2.account_id INNER JOIN disp AS T3 ON T3.account_id = T2.account_id INNER JOIN client AS T4 ON T4.client_id = T3.client_id WHERE T4.gender = 'M' AND T3.type = 'OWNER'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[40] 3+ table JOINs (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Which publisher published the slowest superhero?
+
+SCHEMA:
+  alignment(id integer, alignment text; PRIMARY KEY(id))
+attribute(id integer, attribute_name text; PRIMARY KEY(id))
+colour(id integer, colour text; PRIMARY KEY(id))
+gender(id integer, gender text; PRIM...
+
+GROUND TRUTH:
+  SELECT T2.publisher_name FROM superhero AS T1 INNER JOIN publisher AS T2 ON T1.publisher_id = T2.id INNER JOIN hero_attribute AS T3 ON T1.id = T3.hero_id INNER JOIN attribute AS T4 ON T3.attribute_id = T4.id WHERE T4.attribute_name = 'Speed' ORDER BY T3.attribute_value LIMIT 1
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[41] Anti-join (NOT EXISTS/NOT IN) (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  List the name of clubs that do not have players.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT Name FROM club WHERE Club_ID NOT IN (SELECT Club_ID FROM player)
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[42] Anti-join (NOT EXISTS/NOT IN) (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Show all customer ids without an order.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT customer_id FROM Customers EXCEPT SELECT customer_id FROM Customer_orders
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[43] Anti-join (NOT EXISTS/NOT IN) (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What are the names of clients who have never made an order?
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT name FROM Client EXCEPT SELECT T1.name FROM Client AS T1 JOIN Orders AS T2 ON T1.idClient  =  T2.idClient
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[44] Anti-join (NOT EXISTS/NOT IN) (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Which earpads never use plastic construction?
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT earpads FROM headphone EXCEPT SELECT earpads FROM headphone WHERE construction  =  'Plastic'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[45] Anti-join (NOT EXISTS/NOT IN) (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What are the names of pilots who have flown Piper Cub but not the B-52 Bomber?
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT pilot_name FROM pilotskills WHERE plane_name  =  'Piper Cub' EXCEPT SELECT pilot_name FROM pilotskills WHERE plane_name  =  'B-52 Bomber'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[46] Anti-join (NOT EXISTS/NOT IN) (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Find the countries where no driver come from.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT country FROM country WHERE country_id NOT IN (SELECT country FROM driver)
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[47] Anti-join (NOT EXISTS/NOT IN) (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Which authors have never published under the "Accor" press? Give me their names.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT name FROM author EXCEPT SELECT t1.name FROM author AS t1 JOIN book AS t2 ON t1.author_id  =  t2.author_id JOIN press AS t3 ON t2.press_id  =  t3.press_id WHERE t3.name  =  'Accor'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[48] Anti-join (NOT EXISTS/NOT IN) (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Find all airlines that have flights from airport 'CVO' but not from 'APG'.
+
+SCHEMA:
+  airlines(uid number, Airline text, Abbreviation text, Country text; PRIMARY KEY(uid))
+airports(City text, AirportCode text, AirportName text, Country text, CountryAbbrev text; PRIMARY KEY(AirportCode)...
+
+GROUND TRUTH:
+  SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.SourceAirport  =  "CVO" EXCEPT SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.SourceAirport  =  "APG"
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[49] Anti-join (NOT EXISTS/NOT IN) (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What are the countries that are not playing cartoons written by Todd Casey?
+
+SCHEMA:
+  TV_Channel(id text, series_name text, Country text, Language text, Content text, Pixel_aspect_ratio_PAR text, Hight_definition_TV text, Pay_per_view_PPV text, Package_Option text; PRIMARY KEY(id))
+TV_...
+
+GROUND TRUTH:
+  SELECT country FROM TV_Channel EXCEPT SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  'Todd Casey'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[50] Anti-join (NOT EXISTS/NOT IN) (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What are the names of students who have no friends?
+
+SCHEMA:
+  Highschooler(ID number, name text, grade number; PRIMARY KEY(ID))
+Friend(student_id number, friend_id number; PRIMARY KEY(student_id); FK(student_id REFERENCES Highschooler(ID)); FK(friend_id REFERENC...
+
+GROUND TRUTH:
+  SELECT name FROM Highschooler EXCEPT SELECT T2.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[51] Aggregation with dates/time (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  List the dates of the orders which were placed at the earliest time or have more than 1 items.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT min(date_order_placed) FROM Orders UNION SELECT T1.date_order_placed FROM Orders AS T1 JOIN Order_items AS T2 ON T1.order_id  =  T2.order_id GROUP BY T1.order_id HAVING count(*)  >  1
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[52] Aggregation with dates/time (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Count the number of papers published by Columbia University in 2009.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT count(DISTINCT T1.paper_id) FROM Paper AS T1 JOIN Author_list AS T2 ON T1.paper_id  =  T2.paper_id JOIN Affiliation AS T3 ON T2.affiliation_id  =  T3.affiliation_id WHERE T3.name LIKE "Columbia University" AND T1.year  =  2009
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[53] Aggregation with dates/time (Easy)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What are the maximum height and width of paintings for each year?
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT max(height_mm) ,  max(width_mm) ,  YEAR FROM paintings GROUP BY YEAR ORDER BY YEAR
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[54] Aggregation with dates/time (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Show the stadium name and capacity with most number of concerts in year 2014 or after.
+
+SCHEMA:
+  stadium(Stadium_ID number, Location text, Name text, Capacity number, Highest number, Lowest number, Average number; PRIMARY KEY(Stadium_ID))
+singer(Singer_ID number, Name text, Country text, Song_Nam...
+
+GROUND TRUTH:
+  SELECT T2.name ,  T2.capacity FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.year  >=  2014 GROUP BY T2.stadium_id ORDER BY count(*) DESC LIMIT 1
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[55] Aggregation with dates/time (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What is the date and id of the transcript with at least 2 courses listed?
+
+SCHEMA:
+  Addresses(address_id number, line_1 text, line_2 text, line_3 text, city text, zip_postcode text, state_province_county text, country text, other_address_details text; PRIMARY KEY(address_id))
+Courses...
+
+GROUND TRUTH:
+  SELECT T2.transcript_date ,  T1.transcript_id FROM Transcript_Contents AS T1 JOIN Transcripts AS T2 ON T1.transcript_id  =  T2.transcript_id GROUP BY T1.transcript_id HAVING count(*)  >=  2
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[56] Aggregation with dates/time (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  How many credit card withdrawals were recorded after 1995?
+
+SCHEMA:
+  account(account_id integer, district_id integer, frequency text, date date; PRIMARY KEY(account_id); FK(district_id REFERENCES district(district_id)))
+card(card_id integer, disp_id integer, type text,...
+
+GROUND TRUTH:
+  SELECT COUNT(account_id) FROM trans WHERE STRFTIME('%Y', date) > '1995' AND operation = 'VYBER KARTOU'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[57] Aggregation with dates/time (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  For the drivers who took part in the race in 1983/7/16, what's their race completion rate?
+
+SCHEMA:
+  circuits(circuitId integer, circuitRef text, name text, location text, country text, lat real, lng real, alt integer, url text; PRIMARY KEY(circuitId))
+constructors(constructorId integer, constructorR...
+
+GROUND TRUTH:
+  SELECT CAST(COUNT(CASE WHEN T2.time IS NOT NULL THEN T2.driverId END) AS REAL) * 100 / COUNT(T2.driverId) FROM races AS T1 INNER JOIN results AS T2 ON T2.raceId = T1.raceId WHERE T1.date = '1983-07-16'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[58] Aggregation with dates/time (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Please list the lap records for the circuits in Italy.
+
+SCHEMA:
+  circuits(circuitId integer, circuitRef text, name text, location text, country text, lat real, lng real, alt integer, url text; PRIMARY KEY(circuitId))
+constructors(constructorId integer, constructorR...
+
+GROUND TRUTH:
+  WITH fastest_lap_times AS (SELECT T1.raceId, T1.FastestLapTime, (CAST(SUBSTR(T1.FastestLapTime, 1, INSTR(T1.FastestLapTime, ':') - 1) AS REAL) * 60) + (CAST(SUBSTR(T1.FastestLapTime, INSTR(T1.FastestLapTime, ':') + 1, INSTR(T1.FastestLapTime, '.') - INSTR(T1.FastestLapTime, ':') - 1) AS REAL)) + (CAST(SUBSTR(T1.FastestLapTime, INSTR(T1.FastestLapTime, '.') + 1) AS REAL) / 1000) as time_in_seconds FROM results AS T1 WHERE T1.FastestLapTime IS NOT NULL ) SELECT T1.FastestLapTime as lap_record FROM results AS T1 INNER JOIN races AS T2 on T1.raceId = T2.raceId INNER JOIN circuits AS T3 on T2.circuitId = T3.circuitId INNER JOIN (SELECT MIN(fastest_lap_times.time_in_seconds) as min_time_in_seconds FROM fastest_lap_times INNER JOIN races AS T2 on fastest_lap_times.raceId = T2.raceId INNER JOIN circuits AS T3 on T2.circuitId = T3.circuitId WHERE T3.country = 'Italy' ) AS T4 ON (CAST(SUBSTR(T1.FastestLapTime, 1, INSTR(T1.FastestLapTime, ':') - 1) AS REAL) * 60) + (CAST(SUBSTR(T1.FastestLapTime, INSTR(T1.FastestLapTime, ':') + 1, INSTR(T1.FastestLapTime, '.') - INSTR(T1.FastestLapTime, ':') - 1) AS REAL)) + (CAST(SUBSTR(T1.FastestLapTime, INSTR(T1.FastestLapTime, '.') + 1) AS REAL) / 1000) = T4.min_time_in_seconds LIMIT 1
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[59] Aggregation with dates/time (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What is the most common illness that doctors identified among the patients whose lab work was done between 1/1/1985, and 12/31/1995?
+
+SCHEMA:
+  Examination(ID integer, Examination Date date, aCL IgG real, aCL IgM real, ANA integer, ANA Pattern text, aCL IgA integer, Diagnosis text, KCT text, RVVT text, LAC text, Symptoms text, Thrombosis inte...
+
+GROUND TRUTH:
+  SELECT T2.Diagnosis FROM Examination AS T1 INNER JOIN Patient AS T2 ON T1.ID = T2.ID WHERE T1.`Examination Date` BETWEEN '1985-01-01' AND '1995-12-31' GROUP BY T2.Diagnosis ORDER BY COUNT(T2.Diagnosis) DESC LIMIT 1
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[60] Aggregation with dates/time (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  How many members did attend the event 'Community Theater' in 2019?
+
+SCHEMA:
+  event(event_id text, event_name text, event_date text, type text, notes text, location text, status text; PRIMARY KEY(event_id))
+major(major_id text, major_name text, department text, college text; PR...
+
+GROUND TRUTH:
+  SELECT COUNT(T2.link_to_member) FROM event AS T1 INNER JOIN attendance AS T2 ON T1.event_id = T2.link_to_event WHERE T1.event_name = 'Community Theater' AND SUBSTR(T1.event_date, 1, 4) = '2019'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[61] projection_case (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What is the ratio of merged Unified School District schools in Orange County to merged Elementary School District schools?
+
+SCHEMA:
+  frpm(CDSCode text, Academic Year text, County Code text, District Code integer, School Code text, County Name text, District Name text, School Name text, District Type text, School Type text, Educatio...
+
+GROUND TRUTH:
+  SELECT CAST(SUM(CASE WHEN DOC = 54 THEN 1 ELSE 0 END) AS REAL) / SUM(CASE WHEN DOC = 52 THEN 1 ELSE 0 END) FROM schools WHERE StatusType = 'Merged' AND County = 'Orange'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[62] projection_case (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What percentage of carcinogenic-type molecules does not contain fluorine?
+
+SCHEMA:
+  atom(atom_id text, molecule_id text, element text; PRIMARY KEY(atom_id); FK(molecule_id REFERENCES molecule(molecule_id)))
+bond(bond_id text, molecule_id text, bond_type text; PRIMARY KEY(bond_id); FK...
+
+GROUND TRUTH:
+  SELECT CAST(COUNT(DISTINCT CASE WHEN T1.element <> 'f' THEN T2.molecule_id ELSE NULL END) AS REAL) * 100 / COUNT(DISTINCT T2.molecule_id) FROM atom AS T1 INNER JOIN molecule AS T2 ON T1.molecule_id = T2.molecule_id WHERE T2.label = '+'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[63] projection_case (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What is the composition of element chlorine in percentage among the single bond molecules?
+
+SCHEMA:
+  atom(atom_id text, molecule_id text, element text; PRIMARY KEY(atom_id); FK(molecule_id REFERENCES molecule(molecule_id)))
+bond(bond_id text, molecule_id text, bond_type text; PRIMARY KEY(bond_id); FK...
+
+GROUND TRUTH:
+  SELECT CAST(COUNT(CASE WHEN T.element = 'cl' THEN T.atom_id ELSE NULL END) AS REAL) * 100 / COUNT(T.atom_id) FROM ( SELECT T1.atom_id, T1.element FROM atom AS T1 INNER JOIN molecule AS T2 ON T1.molecule_id = T2.molecule_id INNER JOIN bond AS T3 ON T2.molecule_id = T3.molecule_id WHERE T3.bond_type = '-' ) AS T
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[64] projection_case (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Calculate the percentage of carcinogenic molecules which contain the Chlorine element.
+
+SCHEMA:
+  atom(atom_id text, molecule_id text, element text; PRIMARY KEY(atom_id); FK(molecule_id REFERENCES molecule(molecule_id)))
+bond(bond_id text, molecule_id text, bond_type text; PRIMARY KEY(bond_id); FK...
+
+GROUND TRUTH:
+  SELECT COUNT(CASE WHEN T2.label = '+' AND T1.element = 'cl' THEN T2.molecule_id ELSE NULL END) * 100 / COUNT(T2.molecule_id) FROM atom AS T1 INNER JOIN molecule AS T2 ON T1.molecule_id = T2.molecule_id
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[65] projection_case (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What is the percentage of Story Spotlight cards that do not have a text box? List them by their ID.
+
+SCHEMA:
+  cards(id integer, artist text, asciiName text, availability text, borderColor text, cardKingdomFoilId text, cardKingdomId text, colorIdentity text, colorIndicator text, colors text, convertedManaCost ...
+
+GROUND TRUTH:
+  SELECT CAST(SUM(CASE WHEN isTextless = 0 THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(id) FROM cards WHERE isStorySpotlight = 1
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[66] projection_case (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What is percentage of the cards with a converted Mana Cost of 10 in set of Abyssal Horror?
+
+SCHEMA:
+  cards(id integer, artist text, asciiName text, availability text, borderColor text, cardKingdomFoilId text, cardKingdomId text, colorIdentity text, colorIndicator text, colors text, convertedManaCost ...
+
+GROUND TRUTH:
+  SELECT CAST(SUM(CASE WHEN T1.convertedManaCost = 10 THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(T1.id), T1.name FROM cards AS T1 INNER JOIN sets AS T2 ON T2.code = T1.setCode WHERE T1.name = 'Abyssal Horror'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[67] projection_case (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Among the cards with converted mana cost higher than 5 in the set Coldsnap, how many of them have unknown power?
+
+SCHEMA:
+  cards(id integer, artist text, asciiName text, availability text, borderColor text, cardKingdomFoilId text, cardKingdomId text, colorIdentity text, colorIndicator text, colors text, convertedManaCost ...
+
+GROUND TRUTH:
+  SELECT SUM(CASE WHEN T1.power LIKE '*' OR T1.power IS NULL THEN 1 ELSE 0 END) FROM cards AS T1 INNER JOIN sets AS T2 ON T2.code = T1.setCode WHERE T2.name = 'Coldsnap' AND T1.convertedManaCost > 5
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[68] projection_case (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  List the names of all the cards in the set Hour of Devastation and find the formats in which these cards are legal.
+
+SCHEMA:
+  cards(id integer, artist text, asciiName text, availability text, borderColor text, cardKingdomFoilId text, cardKingdomId text, colorIdentity text, colorIndicator text, colors text, convertedManaCost ...
+
+GROUND TRUTH:
+  SELECT DISTINCT T2.name , CASE WHEN T1.status = 'Legal' THEN T1.format ELSE NULL END FROM legalities AS T1 INNER JOIN cards AS T2 ON T2.uuid = T1.uuid WHERE T2.setCode IN ( SELECT code FROM sets WHERE name = 'Hour of Devastation' )
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[69] projection_case (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  How many percent of female heroes were published by Marvel Comics?
+
+SCHEMA:
+  alignment(id integer, alignment text; PRIMARY KEY(id))
+attribute(id integer, attribute_name text; PRIMARY KEY(id))
+colour(id integer, colour text; PRIMARY KEY(id))
+gender(id integer, gender text; PRIM...
+
+GROUND TRUTH:
+  SELECT CAST(COUNT(CASE WHEN T2.publisher_name = 'Marvel Comics' THEN 1 ELSE NULL END) AS REAL) * 100 / COUNT(T1.id) FROM superhero AS T1 INNER JOIN publisher AS T2 ON T1.publisher_id = T2.id INNER JOIN gender AS T3 ON T1.gender_id = T3.id WHERE T3.gender = 'Female'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[70] projection_case (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Among all superheroes in Marvel Comics, identify the percentage of 'good' superheroes.
+
+SCHEMA:
+  alignment(id integer, alignment text; PRIMARY KEY(id))
+attribute(id integer, attribute_name text; PRIMARY KEY(id))
+colour(id integer, colour text; PRIMARY KEY(id))
+gender(id integer, gender text; PRIM...
+
+GROUND TRUTH:
+  SELECT CAST(COUNT(CASE WHEN T3.alignment = 'Good' THEN T1.id ELSE NULL END) AS REAL) * 100 / COUNT(T1.id) FROM superhero AS T1 INNER JOIN publisher AS T2 ON T1.publisher_id = T2.id INNER JOIN alignment AS T3 ON T1.alignment_id = T3.id WHERE T2.publisher_name = 'Marvel Comics'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[71] projection_case (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What is the annual average number of races held during the first 10 years of the 21st century?
+
+SCHEMA:
+  circuits(circuitId integer, circuitRef text, name text, location text, country text, lat real, lng real, alt integer, url text; PRIMARY KEY(circuitId))
+constructors(constructorId integer, constructorR...
+
+GROUND TRUTH:
+  SELECT CAST(SUM(CASE WHEN year BETWEEN 2000 AND 2010 THEN 1 ELSE 0 END) AS REAL) / 10 FROM races WHERE date BETWEEN '2000-01-01' AND '2010-12-31'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[72] projection_case (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What percentage is Landon Donovan's overall rating higher than Jordan Bowery on 2013/7/12?
+
+SCHEMA:
+  Player_Attributes(id integer, player_fifa_api_id integer, player_api_id integer, date text, overall_rating integer, potential integer, preferred_foot text, attacking_work_rate text, defensive_work_rat...
+
+GROUND TRUTH:
+  SELECT (SUM(CASE WHEN t1.player_name = 'Landon Donovan' THEN t2.overall_rating ELSE 0 END) * 1.0 - SUM(CASE WHEN t1.player_name = 'Jordan Bowery' THEN t2.overall_rating ELSE 0 END)) * 100 / SUM(CASE WHEN t1.player_name = 'Landon Donovan' THEN t2.overall_rating ELSE 0 END) LvsJ_percent FROM Player AS t1 INNER JOIN Player_Attributes AS t2 ON t1.player_fifa_api_id = t2.player_fifa_api_id WHERE SUBSTR(t2.`date`, 1, 10) = '2013-07-12'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[73] projection_case (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What is the ratio of outpatient to inpatient followed up treatment among all the 'SLE' diagnosed patient?
+
+SCHEMA:
+  Examination(ID integer, Examination Date date, aCL IgG real, aCL IgM real, ANA integer, ANA Pattern text, aCL IgA integer, Diagnosis text, KCT text, RVVT text, LAC text, Symptoms text, Thrombosis inte...
+
+GROUND TRUTH:
+  SELECT SUM(CASE WHEN Admission = '+' THEN 1.0 ELSE 0 END) / SUM(CASE WHEN Admission = '-' THEN 1 ELSE 0 END) FROM Patient WHERE Diagnosis = 'SLE'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[74] projection_case (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What proportion of patients who had signs of thrombocytopenia had SLE diagnosed?
+
+SCHEMA:
+  Examination(ID integer, Examination Date date, aCL IgG real, aCL IgM real, ANA integer, ANA Pattern text, aCL IgA integer, Diagnosis text, KCT text, RVVT text, LAC text, Symptoms text, Thrombosis inte...
+
+GROUND TRUTH:
+  SELECT CAST(SUM(CASE WHEN Diagnosis = 'SLE' THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(ID) FROM Examination WHERE Symptoms = 'thrombocytopenia'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[75] projection_case (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  For patients with abnormal platelet level, state the number of patients with lower than normal range. How is it compare to the number of patients with higher than normal range?
+
+SCHEMA:
+  Examination(ID integer, Examination Date date, aCL IgG real, aCL IgM real, ANA integer, ANA Pattern text, aCL IgA integer, Diagnosis text, KCT text, RVVT text, LAC text, Symptoms text, Thrombosis inte...
+
+GROUND TRUTH:
+  SELECT SUM(CASE WHEN T2.PLT <= 100 THEN 1 ELSE 0 END) - SUM(CASE WHEN T2.PLT >= 400 THEN 1 ELSE 0 END) FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[76] subquery (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  List the name of clubs that do not have players.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT Name FROM club WHERE Club_ID NOT IN (SELECT Club_ID FROM player)
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[77] subquery (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Find the details of the customers who have used the least-used service .
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  select distinct t1.customer_details from customers as t1 join customers_and_services as t2 on t1.customer_id  =  t2.customer_id where t2.service_id  =  (select service_id from services group by service_id order by count(*) asc limit 1)
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[78] subquery (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Show ids for all students who don't live in USA.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT StuID FROM Student EXCEPT SELECT StuID FROM City AS T1 JOIN Student AS T2 ON T1.city_code  =  T2.city_code WHERE country  =  "USA"
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[79] subquery (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What are the names and nationalities of the people who did not participate in any ACL conferences?
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT name ,  nationality FROM staff WHERE staff_id NOT IN (SELECT T2.staff_id FROM Conference AS T1 JOIN Conference_participation AS T2 ON T1.conference_id  =  T2.conference_id WHERE T1.Conference_Name  =  "ACL")
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[80] subquery (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Show the names of languages that are the official language for both countries with overall score greater than 95 and countries with overall score less than than 90.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT T3.name FROM countries AS T1 JOIN official_languages AS T2 ON T1.id  =  T2.country_id JOIN languages AS T3 ON T2.language_id  =  T3.id WHERE T1.overall_score  >  95 INTERSECT SELECT T3.name FROM countries AS T1 JOIN official_languages AS T2 ON T1.id  =  T2.country_id JOIN languages AS T3 ON T2.language_id  =  T3.id WHERE T1.overall_score  <  90
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[81] subquery (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Find the name of all movies that are not played in Odeon theater.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT title FROM movies EXCEPT SELECT T1.title FROM movies AS T1 JOIN movietheaters AS T2 ON T1.code  =  T2.movie WHERE T2.name  =  'Odeon'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[82] subquery (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What is the average age for all students who do not own any pets ?
+
+SCHEMA:
+  Student(StuID number, LName text, Fname text, Age number, Sex text, Major number, Advisor number, city_code text; PRIMARY KEY(StuID))
+Has_Pet(StuID number, PetID number; FK(StuID REFERENCES Student(St...
+
+GROUND TRUTH:
+  select avg(age) from student where stuid not in (select stuid from has_pet)
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[83] subquery (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What are the names of people who do not play poker?
+
+SCHEMA:
+  poker_player(Poker_Player_ID number, People_ID number, Final_Table_Made number, Best_Finish number, Money_Rank number, Earnings number; PRIMARY KEY(Poker_Player_ID); FK(People_ID REFERENCES people(Peo...
+
+GROUND TRUTH:
+  SELECT Name FROM people WHERE People_ID NOT IN (SELECT People_ID FROM poker_player)
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[84] subquery (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  List the last name of the owner owning the youngest dog.
+
+SCHEMA:
+  Breeds(breed_code text, breed_name text; PRIMARY KEY(breed_code))
+Charges(charge_id number, charge_type text, charge_amount number; PRIMARY KEY(charge_id))
+Sizes(size_code text, size_description text;...
+
+GROUND TRUTH:
+  SELECT T1.last_name FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id WHERE T2.age  =  ( SELECT max(age) FROM Dogs )
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[85] subquery (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Which user ID has the lowest view?
+
+SCHEMA:
+  badges(Id integer, UserId integer, Name text, Date datetime; PRIMARY KEY(Id); FK(UserId REFERENCES users(Id)))
+comments(Id integer, PostId integer, Score integer, Text text, CreationDate datetime, Use...
+
+GROUND TRUTH:
+  SELECT Id FROM users WHERE Views = ( SELECT MIN(Views) FROM users )
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[86] group_by_having (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  List the manufacturers that are associated with more than one club.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT Manufacturer FROM club GROUP BY Manufacturer HAVING COUNT(*)  >  1
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[87] group_by_having (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Show the names of regions that have more than one building.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT T2.Name FROM building AS T1 JOIN region AS T2 ON T1.Region_ID  =  T2.Region_ID GROUP BY T1.Region_ID HAVING COUNT(*)  >  1
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[88] group_by_having (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What are the names of cities with at least three students?
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT T1.city_name FROM City AS T1 JOIN Student AS T2 ON T1.city_code  =  T2.city_code GROUP BY T1.city_code HAVING count(*)  >=  3
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[89] group_by_having (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Find the teams that won more than once.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT Winning_team FROM race GROUP BY Winning_team HAVING count(*)  >  1
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[90] group_by_having (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Find the team with two or more drivers and return the the manager and car owner of the team.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT t1.manager ,  t1.car_owner FROM team AS t1 JOIN team_driver AS t2 ON t1.team_id  =  t2.team_id GROUP BY t2.team_id HAVING count(*)  >=  2
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[91] group_by_having (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What are the id, sic code and agency id of the client who has attended 1 meeting and has any invoice.
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT T1.client_id ,  T1.sic_code ,  T1.agency_id FROM clients AS T1 JOIN meetings AS T2 ON T1.client_id  =  T2.client_id GROUP BY T1.client_id HAVING count(*)  =  1 INTERSECT SELECT T1.client_id ,  T1.sic_code ,  T1.agency_id FROM clients AS T1 JOIN invoices AS T2 ON T1.client_id  =  T2.client_id
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[92] group_by_having (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Show names of teachers that teach at least two courses.
+
+SCHEMA:
+  course(Course_ID number, Staring_Date text, Course text; PRIMARY KEY(Course_ID))
+teacher(Teacher_ID number, Name text, Age text, Hometown text; PRIMARY KEY(Teacher_ID))
+course_arrange(Course_ID number...
+
+GROUND TRUTH:
+  SELECT T2.Name FROM course_arrange AS T1 JOIN teacher AS T2 ON T1.Teacher_ID  =  T2.Teacher_ID GROUP BY T2.Name HAVING COUNT(*)  >=  2
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[93] group_by_having (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Which grades have 4 or more high schoolers?
+
+SCHEMA:
+  Highschooler(ID number, name text, grade number; PRIMARY KEY(ID))
+Friend(student_id number, friend_id number; PRIMARY KEY(student_id); FK(student_id REFERENCES Highschooler(ID)); FK(friend_id REFERENC...
+
+GROUND TRUTH:
+  SELECT grade FROM Highschooler GROUP BY grade HAVING count(*)  >=  4
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[94] window_function (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Rank schools by their average score in Writing where the score is greater than 499, showing their charter numbers.
+
+SCHEMA:
+  frpm(CDSCode text, Academic Year text, County Code text, District Code integer, School Code text, County Name text, District Name text, School Name text, District Type text, School Type text, Educatio...
+
+GROUND TRUTH:
+  SELECT CharterNum, AvgScrWrite, RANK() OVER (ORDER BY AvgScrWrite DESC) AS WritingScoreRank FROM schools AS T1  INNER JOIN satscores AS T2 ON T1.CDSCode = T2.cds WHERE T2.AvgScrWrite > 499 AND CharterNum is not null
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[95] window_function (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  List the names of virtual schools that are among the top 5 in their respective counties based on average reading scores.
+
+SCHEMA:
+  frpm(CDSCode text, Academic Year text, County Code text, District Code integer, School Code text, County Name text, District Name text, School Name text, District Type text, School Type text, Educatio...
+
+GROUND TRUTH:
+  SELECT School FROM (SELECT T2.School,T1.AvgScrRead, RANK() OVER (PARTITION BY T2.County ORDER BY T1.AvgScrRead DESC) AS rnk FROM satscores AS T1 INNER JOIN schools AS T2 ON T1.cds = T2.CDSCode WHERE T2.Virtual = 'F' ) ranked_schools WHERE rnk <= 5
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[96] window_function (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Rank heroes published by Marvel Comics by their height in descending order.
+
+SCHEMA:
+  alignment(id integer, alignment text; PRIMARY KEY(id))
+attribute(id integer, attribute_name text; PRIMARY KEY(id))
+colour(id integer, colour text; PRIMARY KEY(id))
+gender(id integer, gender text; PRIM...
+
+GROUND TRUTH:
+  SELECT superhero_name, height_cm, RANK() OVER (ORDER BY height_cm DESC) AS HeightRank FROM superhero INNER JOIN publisher ON superhero.publisher_id = publisher.id WHERE publisher.publisher_name = 'Marvel Comics'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[97] window_function (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Rank superheroes from Marvel Comics by their eye color popularity, starting with the most common color.
+
+SCHEMA:
+  alignment(id integer, alignment text; PRIMARY KEY(id))
+attribute(id integer, attribute_name text; PRIMARY KEY(id))
+colour(id integer, colour text; PRIMARY KEY(id))
+gender(id integer, gender text; PRIM...
+
+GROUND TRUTH:
+  SELECT colour.colour AS EyeColor, COUNT(superhero.id) AS Count, RANK() OVER (ORDER BY COUNT(superhero.id) DESC) AS PopularityRank FROM superhero INNER JOIN colour ON superhero.eye_colour_id = colour.id INNER JOIN publisher ON superhero.publisher_id = publisher.id WHERE publisher.publisher_name = 'Marvel Comics' GROUP BY colour.colour
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[98] window_function (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  List down most tallest players' name.
+
+SCHEMA:
+  Player_Attributes(id integer, player_fifa_api_id integer, player_api_id integer, date text, overall_rating integer, potential integer, preferred_foot text, attacking_work_rate text, defensive_work_rat...
+
+GROUND TRUTH:
+  SELECT player_name FROM (SELECT player_name, height, DENSE_RANK() OVER (ORDER BY height DESC) as rank FROM Player) WHERE rank = 1
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[99] order_limit (Easy)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What is the name of the player with the highest earnings?
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT Name FROM player ORDER BY Earnings DESC LIMIT 1
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[100] order_limit (Easy)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What is the cheapest cookie and its flavor?
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT id ,  flavor FROM goods WHERE food  =  "Cookie" ORDER BY price LIMIT 1
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[101] order_limit (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What is the first, middle, and last name of the first student to register?
+
+SCHEMA:
+  Addresses(address_id number, line_1 text, line_2 text, line_3 text, city text, zip_postcode text, state_province_county text, country text, other_address_details text; PRIMARY KEY(address_id))
+Courses...
+
+GROUND TRUTH:
+  SELECT first_name ,  middle_name ,  last_name FROM Students ORDER BY date_first_registered ASC LIMIT 1
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[102] order_limit (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Among the accounts who have loan validity more than 24 months, list out the accounts that have the lowest approved amount and have account opening date before 1997.
+
+SCHEMA:
+  account(account_id integer, district_id integer, frequency text, date date; PRIMARY KEY(account_id); FK(district_id REFERENCES district(district_id)))
+card(card_id integer, disp_id integer, type text,...
+
+GROUND TRUTH:
+  SELECT T1.account_id FROM loan AS T1 INNER JOIN account AS T2 ON T1.account_id = T2.account_id WHERE T1.duration > 24 AND STRFTIME('%Y', T2.date) < '1997' ORDER BY T1.amount ASC LIMIT 1
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[103] order_limit (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Which race has the shortest actual finishing time? Please give the name and year.
+
+SCHEMA:
+  circuits(circuitId integer, circuitRef text, name text, location text, country text, lat real, lng real, alt integer, url text; PRIMARY KEY(circuitId))
+constructors(constructorId integer, constructorR...
+
+GROUND TRUTH:
+  SELECT T1.name, T1.year FROM races AS T1 INNER JOIN results AS T2 on T1.raceId = T2.raceId WHERE T2.milliseconds IS NOT NULL ORDER BY T2.milliseconds LIMIT 1
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[104] null_handling (Easy)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Please list the lowest three eligible free rates for students aged 5-17 in continuation schools.
+
+SCHEMA:
+  frpm(CDSCode text, Academic Year text, County Code text, District Code integer, School Code text, County Name text, District Name text, School Name text, District Type text, School Type text, Educatio...
+
+GROUND TRUTH:
+  SELECT `Free Meal Count (Ages 5-17)` / `Enrollment (Ages 5-17)` FROM frpm WHERE `Educational Option Type` = 'Continuation School' AND `Free Meal Count (Ages 5-17)` / `Enrollment (Ages 5-17)` IS NOT NULL ORDER BY `Free Meal Count (Ages 5-17)` / `Enrollment (Ages 5-17)` ASC LIMIT 3
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[105] null_handling (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  How many white bordered cards are powerful?
+
+SCHEMA:
+  cards(id integer, artist text, asciiName text, availability text, borderColor text, cardKingdomFoilId text, cardKingdomId text, colorIdentity text, colorIndicator text, colors text, convertedManaCost ...
+
+GROUND TRUTH:
+  SELECT COUNT(id) FROM cards WHERE borderColor = 'white' AND cardKingdomId IS NOT NULL AND cardKingdomFoilId IS NOT NULL
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[106] null_handling (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Did the set of cards with "Angel of Mercy" appear on Magic: The Gathering Online?
+
+SCHEMA:
+  cards(id integer, artist text, asciiName text, availability text, borderColor text, cardKingdomFoilId text, cardKingdomId text, colorIdentity text, colorIndicator text, colors text, convertedManaCost ...
+
+GROUND TRUTH:
+  SELECT IIF(T2.mtgoCode IS NOT NULL, 'YES', 'NO') FROM cards AS T1 INNER JOIN sets AS T2 ON T2.code = T1.setCode WHERE T1.name = 'Angel of Mercy'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[107] null_handling (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Describe the display name of the parent ID for child post with the highest score.
+
+SCHEMA:
+  badges(Id integer, UserId integer, Name text, Date datetime; PRIMARY KEY(Id); FK(UserId REFERENCES users(Id)))
+comments(Id integer, PostId integer, Score integer, Text text, CreationDate datetime, Use...
+
+GROUND TRUTH:
+  SELECT DisplayName FROM users WHERE Id = ( SELECT OwnerUserId FROM posts WHERE ParentId IS NOT NULL ORDER BY Score DESC LIMIT 1 )
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[108] null_handling (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What was the fastest lap speed among all drivers in the 2009 Spanish Grand Prix?
+
+SCHEMA:
+  circuits(circuitId integer, circuitRef text, name text, location text, country text, lat real, lng real, alt integer, url text; PRIMARY KEY(circuitId))
+constructors(constructorId integer, constructorR...
+
+GROUND TRUTH:
+  SELECT T2.fastestLapSpeed FROM races AS T1 INNER JOIN results AS T2 ON T2.raceId = T1.raceId WHERE T1.name = 'Spanish Grand Prix' AND T1.year = 2009 AND T2.fastestLapSpeed IS NOT NULL ORDER BY T2.fastestLapSpeed DESC LIMIT 1
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[109] null_handling (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What is full name of the racer who ranked 1st in the 3rd qualifying race held in the Marina Bay Street Circuit in 2008?
+
+SCHEMA:
+  circuits(circuitId integer, circuitRef text, name text, location text, country text, lat real, lng real, alt integer, url text; PRIMARY KEY(circuitId))
+constructors(constructorId integer, constructorR...
+
+GROUND TRUTH:
+  SELECT T2.forename, T2.surname FROM qualifying AS T1 INNER JOIN drivers AS T2 on T1.driverId = T2.driverId INNER JOIN races AS T3 ON T1.raceid = T3.raceid WHERE q3 IS NOT NULL AND T3.year = 2008 AND T3.circuitId IN ( SELECT circuitId FROM circuits WHERE name = 'Marina Bay Street Circuit' ) ORDER BY CAST(SUBSTR(q3, 1, INSTR(q3, ':') - 1) AS INTEGER) * 60 + CAST(SUBSTR(q3, INSTR(q3, ':') + 1, INSTR(q3, '.') - INSTR(q3, ':') - 1) AS REAL) + CAST(SUBSTR(q3, INSTR(q3, '.') + 1) AS REAL) / 1000 ASC LIMIT 1
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[110] string_semantics (Easy)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What are the login names and passwords of the customers whose phone number have the prefix '+12'?
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT login_name ,  login_password FROM Customers WHERE phone_number LIKE '+12%'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[111] string_semantics (Easy)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  What is the name of every sailor whose name contains the letter e?
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT name FROM Sailors WHERE name LIKE '%e%'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[112] string_semantics (Easy)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Return the names of langauges that contain the substring "ish".
+
+SCHEMA:
+  /* Schema not available */...
+
+GROUND TRUTH:
+  SELECT name FROM languages WHERE name LIKE "%ish%"
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[113] string_semantics (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Find the role, street, city and state of the professionals living in a city that contains the substring 'West'.
+
+SCHEMA:
+  Breeds(breed_code text, breed_name text; PRIMARY KEY(breed_code))
+Charges(charge_id number, charge_type text, charge_amount number; PRIMARY KEY(charge_id))
+Sizes(size_code text, size_description text;...
+
+GROUND TRUTH:
+  SELECT role_code ,  street ,  city ,  state FROM professionals WHERE city LIKE '%West%'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[114] string_semantics (Medium)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Who was the player that got the lap time of 0:01:27 in the race No. 161? Show his introduction website.
+
+SCHEMA:
+  circuits(circuitId integer, circuitRef text, name text, location text, country text, lat real, lng real, alt integer, url text; PRIMARY KEY(circuitId))
+constructors(constructorId integer, constructorR...
+
+GROUND TRUTH:
+  SELECT DISTINCT T2.forename, T2.surname, T2.url FROM lapTimes AS T1 INNER JOIN drivers AS T2 ON T2.driverId = T1.driverId WHERE T1.raceId = 161 AND T1.time LIKE '1:27%'
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[115] exists_equivalence (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  List the superheroes from Marvel Comics who have the super power of 'Super Strength'.
+
+SCHEMA:
+  alignment(id integer, alignment text; PRIMARY KEY(id))
+attribute(id integer, attribute_name text; PRIMARY KEY(id))
+colour(id integer, colour text; PRIMARY KEY(id))
+gender(id integer, gender text; PRIM...
+
+GROUND TRUTH:
+  SELECT superhero_name FROM superhero AS T1 WHERE EXISTS (SELECT 1 FROM hero_power AS T2 INNER JOIN superpower AS T3 ON T2.power_id = T3.id WHERE T3.power_name = 'Super Strength' AND T1.id = T2.hero_id)AND EXISTS (SELECT 1 FROM publisher AS T4 WHERE T4.publisher_name = 'Marvel Comics' AND T1.publisher_id = T4.id)
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
+[116] exists_equivalence (Hard)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+QUESTION:
+  Which superheroes have a durability attribute value of less than 50?
+
+SCHEMA:
+  alignment(id integer, alignment text; PRIMARY KEY(id))
+attribute(id integer, attribute_name text; PRIMARY KEY(id))
+colour(id integer, colour text; PRIMARY KEY(id))
+gender(id integer, gender text; PRIM...
+
+GROUND TRUTH:
+  SELECT superhero_name FROM superhero AS T1 WHERE EXISTS (SELECT 1 FROM hero_attribute AS T2 INNER JOIN attribute AS T3 ON T2.attribute_id = T3.id WHERE T3.attribute_name = 'Durability' AND T2.attribute_value < 50 AND T1.id = T2.hero_id)
+
+BASE MODEL:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+FINE-TUNED:
+  ERROR: 'NoneType' object is not callable
+  [WRONG]
+
+GEMINI (Gemini (unavailable)):
+  ERROR: No Gemini API available
+  [WRONG]
+
+======================================================================================================================================================
+
